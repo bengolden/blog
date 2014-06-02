@@ -2,9 +2,17 @@
 
 <p><%= @user.email %></p>
 
+<p>Posts</p>
 <% @user.posts.each do |post| %>
 
 <p><%= post.body %></p>
 
+
 <%end%>
 
+<%= form_tag("/posts", :method => "post") do %>
+  <%= label_tag(:body, "New post:") %>
+  <%= text_field_tag(:name) %>
+  <%= hidden_field_tag 'user_id', @user.id %>
+  <%= submit_tag("Create") %>
+<% end %>

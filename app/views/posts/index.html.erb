@@ -1,0 +1,11 @@
+<% @posts.each do |post| %>
+
+<p>
+  <%= link_to @user.name, "/posts/#{post.id}" %>
+  <%= link_to "update", "/posts/#{post.id}/edit" %>
+  <%= link_to "delete", "/posts/#{post.id}/", method: :delete %>
+</p>
+
+<%end%>
+
+<%= link_to "new post", "/posts/new" %>
