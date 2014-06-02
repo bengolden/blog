@@ -1,0 +1,11 @@
+<% @users.each do |user| %>
+
+<p>
+  <%= link_to user.name, "/users/#{user.id}" %>
+  <%= link_to "update", "/users/#{user.id}/edit" %>
+  <%= link_to "delete", "/users/#{user.id}/", method: :delete %>
+</p>
+
+<%end%>
+
+<%= link_to "new user", "/users/new" %>

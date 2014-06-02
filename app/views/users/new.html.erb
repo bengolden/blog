@@ -1,0 +1,7 @@
+<%= form_tag("/users", :method => "post") do %>
+  <%= label_tag(:name, "New user name:") %>
+  <%= text_field_tag(:name) %>
+  <%= label_tag(:email, "New user email:") %>
+  <%= text_field_tag(:email) %>
+  <%= submit_tag("Create") %>
+<% end %>
